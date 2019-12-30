@@ -97,7 +97,7 @@
               <av:PointCollection x:Key="ConnectorLocation">300,665.5 300,695.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="436,500" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -323,7 +323,18 @@
                                     <ui:ClearDataTable DataTable="[ExtractDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
                                   </If.Else>
                                 </If>
-                                <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Entered" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="467,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="467,224" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="222,146" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Entered" DataTable="[ExtractDataTable]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
                               </Sequence>
                               <FlowStep.Next>
                                 <FlowStep x:Name="__ReferenceID2">
@@ -333,7 +344,7 @@
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;results_&quot; + date.Now.ToString(&quot;yyyyMMddhhmm&quot;) + &quot;.xlsx&quot;]">
+                                  <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="314,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;results_&quot; + date.Now.ToString(&quot;yyyyMMddhhmmss&quot;) + &quot;.xlsx&quot;]">
                                     <ui:WriteRange.StartingCell>
                                       <InArgument x:TypeArguments="x:String">
                                         <Literal x:TypeArguments="x:String" Value="" />

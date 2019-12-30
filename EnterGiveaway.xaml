@@ -94,7 +94,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
-                <x:Reference>__ReferenceID9</x:Reference>
+                <x:Reference>__ReferenceID10</x:Reference>
               </Flowchart.StartNode>
               <FlowDecision x:Name="__ReferenceID8" Condition="[useDescription]" DisplayName="Check Description?" sap:VirtualizedContainerService.HintSize="107,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                 <sap:WorkflowViewStateService.ViewState>
@@ -161,91 +161,109 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <av:Point x:Key="ShapeLocation">480.641666666667,365.5</av:Point>
                                     <av:Size x:Key="ShapeSize">160,87</av:Size>
-                                    <av:PointCollection x:Key="TrueConnector">480.641666666667,409 280,409 280,464.5</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">480.641666666667,409 450.641666666667,409 450.641666666667,398.04 380,398.04</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <FlowDecision.True>
-                                  <FlowStep x:Name="__ReferenceID3">
+                                  <FlowStep x:Name="__ReferenceID9">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">180,464.5</av:Point>
+                                        <av:Point x:Key="ShapeLocation">180,372.54</av:Point>
                                         <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">280,515.5 280,565.5</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">280,423.54 280,464.5</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
-                                      <ui:Click.CursorPosition>
-                                        <ui:CursorPosition Position="Center">
-                                          <ui:CursorPosition.OffsetX>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:CursorPosition.OffsetX>
-                                          <ui:CursorPosition.OffsetY>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:CursorPosition.OffsetY>
-                                        </ui:CursorPosition>
-                                      </ui:Click.CursorPosition>
-                                      <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="55e0a10e5c912f5ecadd75b9d7002f16" Selector="&lt;html app='firefox.exe' url='https://www.steamgifts.com/giveaway/*/*' /&gt;&lt;webctrl tag='DIV' class='sidebar__entry-insert' /&gt;" WaitForReady="INTERACTIVE" />
-                                      </ui:Click.Target>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&lt;html app='firefox.exe' url='&quot; + URL + &quot;' /&gt;&lt;webctrl tag='DIV' class='sidebar__entry-insert' /&gt;&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                    </ui:Click>
+                                    </ui:LogMessage>
                                     <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID6">
+                                      <FlowStep x:Name="__ReferenceID3">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">180,565.5</av:Point>
+                                            <av:Point x:Key="ShapeLocation">180,464.5</av:Point>
                                             <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">280,616.5 280,646.5 280.5,646.5 280.5,656.5</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">280,515.5 280,565.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:UiElementExists DisplayName="Element Exists - Exit giveaway button" Exists="[hasExitButton]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
-                                          <ui:UiElementExists.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c075002ae2e2b26f4e5822b7852e42a" Selector="&lt;html app='firefox.exe' url='https://www.steamgifts.com/giveaway/*/*' /&gt;&lt;webctrl tag='DIV' class='sidebar__entry-delete' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
-                                          </ui:UiElementExists.Target>
+                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="55e0a10e5c912f5ecadd75b9d7002f16" Selector="[&quot;&lt;html app='firefox.exe' url='*&quot; + URL + &quot;*' /&gt;&lt;webctrl tag='DIV' class='sidebar__entry-insert' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+                                          </ui:Click.Target>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                        </ui:UiElementExists>
+                                        </ui:Click>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID5" Condition="[hasExitButton]" DisplayName="Has &quot;Exit Giveaway&quot; button appeared?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                          <FlowStep x:Name="__ReferenceID6">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <av:Point x:Key="ShapeLocation">200.5,656.5</av:Point>
-                                                <av:Size x:Key="ShapeSize">160,87</av:Size>
-                                                <av:PointCollection x:Key="TrueConnector">200.5,700 140,700 140,790</av:PointCollection>
+                                                <av:Point x:Key="ShapeLocation">180,565.5</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">280,616.5 280,646.5 280.5,646.5 280.5,656.5</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <FlowDecision.True>
-                                              <FlowStep x:Name="__ReferenceID7">
+                                            <ui:UiElementExists DisplayName="Element Exists - Exit giveaway button" Exists="[hasExitButton]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                              <ui:UiElementExists.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c075002ae2e2b26f4e5822b7852e42a" Selector="&lt;html app='firefox.exe' url='https://www.steamgifts.com/giveaway/*/*' /&gt;&lt;webctrl tag='DIV' class='sidebar__entry-delete' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                              </ui:UiElementExists.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:UiElementExists>
+                                            <FlowStep.Next>
+                                              <FlowDecision x:Name="__ReferenceID5" Condition="[hasExitButton]" DisplayName="Has &quot;Exit Giveaway&quot; button appeared?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">19,790</av:Point>
-                                                    <av:Size x:Key="ShapeSize">242,60</av:Size>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <av:Point x:Key="ShapeLocation">200.5,656.5</av:Point>
+                                                    <av:Size x:Key="ShapeSize">160,87</av:Size>
+                                                    <av:PointCollection x:Key="TrueConnector">200.5,700 140,700 140,790</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:Boolean">[didEnter]</OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                                  </Assign.Value>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </Assign>
-                                              </FlowStep>
-                                            </FlowDecision.True>
-                                          </FlowDecision>
+                                                <FlowDecision.True>
+                                                  <FlowStep x:Name="__ReferenceID7">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <av:Point x:Key="ShapeLocation">19,790</av:Point>
+                                                        <av:Size x:Key="ShapeSize">242,60</av:Size>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Boolean">[didEnter]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                      </Assign.Value>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Assign>
+                                                  </FlowStep>
+                                                </FlowDecision.True>
+                                              </FlowDecision>
+                                            </FlowStep.Next>
+                                          </FlowStep>
                                         </FlowStep.Next>
                                       </FlowStep>
                                     </FlowStep.Next>
@@ -271,7 +289,7 @@
               <x:Reference>__ReferenceID5</x:Reference>
               <x:Reference>__ReferenceID6</x:Reference>
               <x:Reference>__ReferenceID7</x:Reference>
-              <FlowStep x:Name="__ReferenceID9">
+              <FlowStep x:Name="__ReferenceID10">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">199,10</av:Point>
@@ -296,6 +314,7 @@
                   <x:Reference>__ReferenceID8</x:Reference>
                 </FlowStep.Next>
               </FlowStep>
+              <x:Reference>__ReferenceID9</x:Reference>
             </Flowchart>
           </Sequence>
         </ActivityAction>
