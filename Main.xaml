@@ -101,7 +101,7 @@
               <av:PointCollection x:Key="ConnectorLocation">810,1066.5 810,1095.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="436,500" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,7 +358,7 @@
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The steamgifts bot has run with the following parameters:&quot; + Environment.NewLine + &quot;MaxEntries: &quot; + cEntries.ToString + Environment.NewLine + &quot;UseDescription: &quot; + cDescription.ToString + Environment.NewLine + &quot;RetryLimit: &quot; + cRetryLimit.ToString + Environment.NewLine + Environment.NewLine + &quot;The results have been send as an attachment. &quot; + Environment.NewLine + &quot;Beep Boop!&quot;]" DisplayName="Send SMTP Mail Message" Email="dovleacdietself@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="bot123!@#" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Steamgifts Bot - Summary" To="burcea.bogdan.madalin@gmail.com">
+                                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The steamgifts bot has run with the following parameters:&quot; + Environment.NewLine + &quot;MaxEntries: &quot; + cEntries.ToString + Environment.NewLine + &quot;UseDescription: &quot; + cDescription.ToString + Environment.NewLine + &quot;RetryLimit: &quot; + cRetryLimit.ToString + Environment.NewLine + Environment.NewLine + &quot;The results have been sent as an attachment. &quot; + Environment.NewLine + &quot;Beep Boop!&quot;]" DisplayName="Send SMTP Mail Message" Email="dovleacdietself@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="bot123!@#" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Steamgifts Bot - Summary" To="burcea.bogdan.madalin@gmail.com">
                                         <ui:SendMail.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                             <InArgument x:TypeArguments="x:String">[outputFile]</InArgument>
