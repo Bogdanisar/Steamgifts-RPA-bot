@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="cEntries" Type="OutArgument(x:Int32)" />
     <x:Property Name="cDescription" Type="OutArgument(x:Int32)" />
+    <x:Property Name="cRetryLimit" Type="OutArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>526,1008</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>526,1068</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,7 +58,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReadConfig" sap:VirtualizedContainerService.HintSize="486,888" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadConfig" sap:VirtualizedContainerService.HintSize="486,988" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="path" />
       <Variable x:TypeArguments="sd:DataTable" Name="configDT" />
@@ -103,6 +104,14 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:Int32">[CInt( configDT.Rows(0).Item("Description").ToString.Trim )]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[cRetryLimit]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[CInt( configDT.Rows(0).Item("RetryLimit").ToString.Trim )]</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>
