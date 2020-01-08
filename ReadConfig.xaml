@@ -3,11 +3,13 @@
     <x:Property Name="cEntries" Type="OutArgument(x:Int32)" />
     <x:Property Name="cDescription" Type="OutArgument(x:Int32)" />
     <x:Property Name="cRetryLimit" Type="OutArgument(x:Int32)" />
+    <x:Property Name="cDestinationEmail" Type="OutArgument(x:String)" />
+    <x:Property Name="cSourceEmailCredential" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>526,1068</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>526,1308</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +60,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReadConfig" sap:VirtualizedContainerService.HintSize="486,988" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadConfig" sap:VirtualizedContainerService.HintSize="486,1188" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="path" />
       <Variable x:TypeArguments="sd:DataTable" Name="configDT" />
@@ -112,6 +114,22 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:Int32">[CInt( configDT.Rows(0).Item("RetryLimit").ToString.Trim )]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[cDestinationEmail]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[configDT.Rows(0).Item("DestinationEmail").ToString.Trim]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[cSourceEmailCredential]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[configDT.Rows(0).Item("SourceEmailCredential").ToString.Trim]</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>
