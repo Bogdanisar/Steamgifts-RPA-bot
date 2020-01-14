@@ -88,7 +88,7 @@
           <av:PointCollection x:Key="ConnectorLocation">810,1110.5 810,1134.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Check Logged Out - workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="VerifyLogin">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Check Logged Out - workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="VerifyLogin">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="ui:Browser" x:Key="browser">[browser]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
@@ -107,7 +107,7 @@
               <av:PointCollection x:Key="ConnectorLocation">810,1186.5 810,1215.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DataScrapingPlus workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="DataScrapingPlus.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DataScraping workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="DataScraping.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="ui:Browser" x:Key="browser">[browser]</InArgument>
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="ExtractDataTable">[ExtractDataTable]</OutArgument>
